@@ -18,8 +18,8 @@ for line in open(filename):
     try:
         ip_address = socket.gethostbyname(hostname)
     except EnvironmentError as e:
-	      print("Couldn't find IP address for {}: {}".format(hostname, e))
-	      continue
+	print("Couldn't find IP address for {}: {}".format(hostname, e))
+	continue
     print("IP address for {0} is {1}.".format(hostname, ip_address))
 else:
     print ("\nFinished the operation")
